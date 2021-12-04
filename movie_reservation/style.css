@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  --background-dark: #242333;
+  --color-seat-occupied: #444451;
+  --color-seat-possible: #fff;
+  --color-seat-selected:#6feaf6;
+
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color:var(--background-dark);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  color: white;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-container {
+  margin: 2rem 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  padding: .5rem 1.5rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.container {
+  perspective: 100rem;
+  margin-bottom: 3rem;
+}
+
+.seat {
+  background-color: var(--color-seat-possible);
+  height: 1.2rem;
+  width: 1.5rem;
+  margin: .3rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.seat:nth-of-type(2) {
+  margin-right: 1.5rem;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 1.5rem;
+}
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+.showcase {
+  list-style: none;
+  display: flex;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: .5rem;
+  color: #777;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.showcase li {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 0 1rem;
+  
+
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 7rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  transform: rotateX(-45deg) ;
+  box-shadow: 0 .3rem 1rem rgba(255,255,255, .7);
+  margin-bottom: 3rem;
+}
+
+/* seat class */
+.selected {
+  background-color: var(--color-seat-selected);
+}
+.occupied {
+  background-color: var(--color-seat-occupied);
+}
+
+p.text span {
+  color: #6feaf6;
+  padding: 0 1rem;
+}
