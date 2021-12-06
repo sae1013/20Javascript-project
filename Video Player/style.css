@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+  --stop: #dc3545;
+  --play: #28a745;
+  --pause:#fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Questrial', sans-serif;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  background-color: grey;
+  
+}
+
+h1 {
+  color: #fff;
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.screen {
+  cursor: pointer;
+  width: 50%;
+  background-color: #000;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+@media (max-width: 800px){
+  .screen , .controls{
+    width:50%;
+  }
+}
+
+.controls {
+  width:50%;
+  background-color: #333;
+  padding: 1rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.screen[poster] {
+  object-fit: contain;
+  min-height:30rem;
+}
+.screen,
+.controls {
+  max-width: 60rem;
+}
+.controls > * {
+  margin-right: .5rem;
+  padding: .2rem;
+}
+.controls input {
+  width:80%;
+}
+#timestamp {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.controls .btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.fa-play {
+  color: var(--play);
+}
+.fa-stop {
+  color: var(--stop);
+  margin-right: 2rem;
+}
+.fa-pause {
+  color: var(--pause);
+}
+.btn:focus {
+  outline: 0;
+}
